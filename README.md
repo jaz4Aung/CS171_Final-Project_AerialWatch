@@ -4,7 +4,7 @@
 **Person detection from satellite**
 
 ## Authors
-**Aung Aung** , Github: jaz4Aung
+**Aung Aung** , Github: jaz4Aung <br>
 **Partner**, Github:
 
 ## Problems
