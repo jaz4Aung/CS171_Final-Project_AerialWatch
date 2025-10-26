@@ -1,30 +1,30 @@
 # CS171_Final-Project
 
-##Project Title
+## Project Title
 **Person detection from satellite**
 
-##Authors
+## Authors
 **Aung Aung** , Github: jaz4Aung
 **Partner**, Github:
 
-##Problems
+## Problems
 
-##Research Topic
-
-
-##Data Collection Plans
-
-###Aung's Part
+## Research Topic
 
 
-###Mago's Part
+## Data Collection Plans
+
+### Aung's Part
 
 
-##Model's Plan 
-
-###Aung's Model
-
-###Mago's Model
+### Mago's Part
 
 
-##Project Timeline
+## Model's Plan 
+
+### Aung's Model
+
+### Mago's Model
+
+
+## Project Timeline
