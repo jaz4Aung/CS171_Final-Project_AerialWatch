@@ -27,7 +27,7 @@ We will analyse failure cases and discuss how we can effectively increase genera
 </ul>
 
 **Margarita Rincon**:
-**SARD (Search and Rescue) Dataset**
+**Data Collection and Processing**
 <ul>
 <li>Dataset: SARD – Search and Rescue on Kaggle</li>
 <li>Collect aerial imagery taken in natural, emergency-response scenarios.</li>
@@ -56,11 +56,16 @@ We will analyse failure cases and discuss how we can effectively increase genera
 **Margarita Rincon 's Model**
 
 <ul>
-<li>  </li>
-<li>  </li>
-<li>  </li>
-
+<li>**Transfer Learning Model**</li>
+<li>Pretrained ResNet18 (or MobileNetV2) fine-tuned for binary classification.</li>
+<li>Loss & Optimizer: CrossEntropyLoss + Adam (lr=1e-4, weight_decay=5e-4)</li>
+<li>Augmentations: RandomRotation, RandomHorizontalFlip, RandomCrop</li>
+<li>Training: 40–60 epochs with early stopping based on validation loss.</li>
+<li>Evaluation Metrics: Accuracy, ROC-AUC, Precision/Recall, Confusion Matrix.</li>
+<li>Goal: Compare performance between models to assess efficiency of pretrained features on smaller datasets.</li>
 </ul>
+
+
 
 ### Project Timeline
 
