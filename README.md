@@ -1,5 +1,5 @@
-
-# CS171_Final-Project
+## Description
+This is the Final Project for CS_171/SJSU/Fall_2025 class, which explores how convolutional neural networks (CNNs) can distinguish between aerial drone images that contain people and those that do not. Using RGB imagery from the VisDrone and SAR Search & Rescue datasets, we train and evaluate models that classify each image into “people” or “no people.” The goal is to develop a lightweight and efficient vision model suitable for real-time aerial analysis.
 
 ## Project Title
 **AerialWatch: Detection of Human presence from Drone Images**
@@ -24,7 +24,6 @@ We will analyse failure cases and discuss how we can effectively increase genera
 <li>Create 70/15/15/ splits and save files accordingly. </li>
 </ul>
 
-
 **Margarita Rincon**: 
 <ul>
 <li>  </li>
@@ -32,7 +31,6 @@ We will analyse failure cases and discuss how we can effectively increase genera
 <li>  </li>
 
 </ul>
-
 
 ## Model's Plan 
 
