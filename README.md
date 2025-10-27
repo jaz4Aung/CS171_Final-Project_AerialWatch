@@ -26,12 +26,16 @@ We will analyse failure cases and discuss how we can effectively increase genera
 <li>Create 70/15/15/ splits and save files accordingly. </li>
 </ul>
 
-**Margarita Rincon**: 
+**Margarita Rincon**:
+**SARD (Search and Rescue) Dataset**
 <ul>
-<li>  </li>
-<li>  </li>
-<li>  </li>
-
+<li>Dataset: SARD – Search and Rescue on Kaggle</li>
+<li>Collect aerial imagery taken in natural, emergency-response scenarios.</li>
+<li>Separate labeled images into “people” and “no_people” categories.</li>
+<li>Remove duplicates, artifacts, and unclear samples.</li>
+<li>Resize all images to 224×224 and normalize between 0–1.</li>
+<li>Data Augmentation</li>
+<li>Split dataset into 70% training, 15% validation, and 15% testing subsets.</li>
 </ul>
 
 ### Model's Plan 
