@@ -15,7 +15,9 @@ This research explores challenges of **small-object detection** caused by low re
 We evaluate the robustness to scale, viewpoint, and scene diversity, and report accuracy, ROC-AUC, and calibration.<br>
 We will analyse failure cases and discuss how we can effectively increase generalization of the models.
 
-## Data Collection Plan
+
+## Project Outline
+### Data Collection Plan
 
 **Aung**: 
 <ul>
@@ -32,7 +34,7 @@ We will analyse failure cases and discuss how we can effectively increase genera
 
 </ul>
 
-## Model's Plan 
+### Model's Plan 
 
 **Aung's Model**
 <ul>
@@ -56,28 +58,28 @@ We will analyse failure cases and discuss how we can effectively increase genera
 
 </ul>
 
-## Project Timeline
+### Project Timeline
 
-### Wk 1(10/27 - 11/1)
+#### Wk 1(10/27 - 11/1)
 Data Curation, formatting, and splitting.
 
-### Wk 2 (11/2 - 11/8)
+#### Wk 2 (11/2 - 11/8)
 Data research and start Constructing both of the models. <br>
 Deliverable: Data pre-processing notebook.
 
-### Wk 3 (11/9 - 11/15)
+#### Wk 3 (11/9 - 11/15)
 Refining and tuning the model.
 ### Wk 4(11/16 - 11/22)
 Analysis and Visualization.
 
-### Wk5(11/23 - 11/29)
+#### Wk5(11/23 - 11/29)
 Finalize README and polishing the notebooks. Prepare for the final presentation.
 
-### Wk6(11/30 - 12/6)
+#### Wk6(11/30 - 12/6)
 12/2/2025 : Give a presentation in the class about the Project. 
 Deliverable: 8 min deck and demo images.
 
-### Wk7( 12/8 - 12/11)
+#### Wk7( 12/8 - 12/11)
 Optimize the models by listening to the feedback from the presentation.<br>
 Deliverable: 
 <ol>
@@ -86,4 +88,12 @@ Deliverable:
 <li>2x Analysis and Visualization Notebooks</li>
 <li>2x Data pre-processing Notebook</li>
 </ol>
+
+## .gitignore
+This repository includes a standard Python `.gitignore` file to exclude cache files, model weights, large datasets, and system artifacts from version control.
+You can view the full file here: [`.gitignore`](./.gitignore)
+
+## License
+This project is released under the **MIT License**, allowing free use, modification, and distribution with proper attribution.  
+See the full license text here: [LICENSE](./LICENSE)
 
