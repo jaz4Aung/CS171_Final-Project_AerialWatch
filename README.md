@@ -21,7 +21,7 @@ We will analyse failure cases and discuss how we can effectively increase genera
 
 **Aung**: 
 <ul>
-<li>Download VisDrone Images and gather images with visible pedestrians for  people and empty senses for no_people.<br> Link: https://github.com/VisDrone/VisDrone-Dataset?utm_source=chatgpt.com</li>
+<li>Download VisDrone Images and gather images with visible pedestrians for  people and empty senses for no_people.<br> Link: https://github.com/VisDrone/VisDrone-Dataset</li>
 <li> Clean the data by removing duplicates and blurry photos, photo size adjustments and normalize the data.</li>
 <li>Create 70/15/15/ splits and save files accordingly. </li>
 </ul>
