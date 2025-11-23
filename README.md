@@ -9,12 +9,29 @@ This is the Final Project for CS_171/SJSU/Fall_2025 class, which explores how co
 **Margarita Rincon**, Github: Mago-RM
 
 ## Question and Research Topic
-We want to observe if a Convolutional neural network can reliably identify the presence and absence of humans from aerial “RGB”  images taken by drones. <br>
-Using urban aerial images of people, we will train and evaluate our models to detect pedestrians at different altitudes and crowd sizes. <br>
-This research explores challenges of **small-object detection** caused by low resolution, obstructions, and different camera angles.<br>
-We evaluate the robustness to scale, viewpoint, and scene diversity, and report accuracy, ROC-AUC, and calibration.<br>
-We will analyse failure cases and discuss how we can effectively increase generalization of the models.
 
+We investigate whether deep learning models can reliably determine the **presence or absence of humans** in aerial RGB images captured by drones. Using drone imagery from datasets such as VisDrone, we frame the task as a **binary classification problem** with two classes: `people` and `no_people`.
+
+A major challenge is that humans appear as **very small objects** in drone images due to altitude, camera angle, and resolution limits. These factors make the classification problem difficult because meaningful human features can be lost during image downsampling. To address this, we apply data augmentation and experiment with two different model architectures.
+
+### Model Comparison
+This project compares two approaches:
+
+1. **MobileNetV2 (Transfer Learning)**  
+   A pretrained backbone fine-tuned for binary classification, leveraging ImageNet features for improved robustness and generalization.
+
+2. **Custom CNN (From Scratch)**  
+   A lightweight convolutional neural network built and trained from scratch by our teammate, designed specifically for this task.
+
+We evaluate which approach performs better on drone imagery and under what conditions pretrained models outperform smaller, task-specific networks.
+
+### Evaluation
+Performance is measured using:
+- **Accuracy**
+- **Precision & Recall**
+- **Confusion Matrix**
+
+We analyze common failure cases—such as occlusions, scale variation, and cluttered environments—and outline strategies to improve generalization, including higher-resolution inputs, stronger augmentation, and additional diverse training data.
 
 ## Project Outline
 ### Data Collection Plan
@@ -29,12 +46,13 @@ We will analyse failure cases and discuss how we can effectively increase genera
 **Margarita Rincon**:
 **Data Collection and Processing**
 <ul>
-<li>Dataset: SARD – Search and Rescue on Kaggle</li>
+<li>Dataset: SARD – Search and Rescue</li>
+<li>Source: Dataset From: **https://universe.roboflow.com/datasets-pdabr/sard-8xjhy**</li>
 <li>Collect aerial imagery taken in natural, emergency-response scenarios.</li>
 <li>Separate labeled images into “people” and “no_people” categories.</li>
 <li>Remove duplicates, artifacts, and unclear samples.</li>
-<li>Resize all images to 224×224 and normalize between 0–1.</li>
-<li>Data Augmentation</li>
+<li>Resize all images to 224×224 and normalize.</li>
+<li>Apply Data Augmentation</li>
 <li>Split dataset into 70% training, 15% validation, and 15% testing subsets.</li>
 </ul>
 
@@ -53,18 +71,17 @@ We will analyse failure cases and discuss how we can effectively increase genera
 <li>Outputs: Accuracy, ROC-AUC</li>
 </ul><br>
 
-**Margarita Rincon 's Model**
+**Margarita Rincon's Model: MobileNetV2**
 
 <ul>
-<li>**Transfer Learning Model**</li>
-<li>Pretrained ResNet18 (or MobileNetV2) fine-tuned for binary classification.</li>
-<li>Loss & Optimizer: CrossEntropyLoss + Adam (lr=1e-4, weight_decay=5e-4)</li>
-<li>Augmentations: RandomRotation, RandomHorizontalFlip, RandomCrop</li>
-<li>Training: 40–60 epochs with early stopping based on validation loss.</li>
-<li>Evaluation Metrics: Accuracy, ROC-AUC, Precision/Recall, Confusion Matrix.</li>
-<li>Goal: Compare performance between models to assess efficiency of pretrained features on smaller datasets.</li>
+  <li><strong>Transfer Learning Model</strong></li>
+  <li>Used pretrained <strong>MobileNetV2</strong>, replacing the final classifier layer to output 2 classes (people / no_people).</li>
+  <li>Loss & Optimizer: <strong>CrossEntropyLoss</strong> with <strong>Adam</strong> optimizer (lr=1e-4, weight_decay=1e-4).</li>
+  <li>Augmentations: <strong>RandomHorizontalFlip</strong>, <strong>RandomRotation(10)</strong>, <strong>ColorJitter(0.1, 0.1, 0.1)</strong>.</li>
+  <li>Training: <strong>20–30 epochs</strong> (longer possible); monitored training/validation loss to detect overfitting.</li>
+  <li>Evaluation: <strong>Accuracy</strong>, <strong>Precision/Recall</strong>, <strong>Confusion Matrix</strong>; tracked Train vs Test performance.</li>
+  <li>Goal: Evaluate how well pretrained features help detect small, distant humans in drone images compared to a custom CNN.</li>
 </ul>
-
 
 
 ### Project Timeline
