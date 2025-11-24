@@ -38,9 +38,12 @@ We analyze common failure cases—such as occlusions, scale variation, and clutt
 
 **Aung**: 
 <ul>
-<li>Download VisDrone Images and gather images with visible pedestrians for  people and empty senses for no_people.<br> Link: https://github.com/VisDrone/VisDrone-Dataset</li>
-<li> Clean the data by removing duplicates and blurry photos, photo size adjustments and normalize the data.</li>
-<li>Create 70/15/15/ splits and save files accordingly. </li>
+<li>Dataset:Will be using the SARD search and rescue dataset for training, testing, and validations.</li>
+<li>Source: https://universe.roboflow.com/datasets-pdabr/sard-8xjhy </li>
+<li>Labelling: Relabel the images as the "people" and "no people categories" </li>
+<li>Data Cleaning: Clean the data by removing duplicates and blurry photos, photo size adjustments and normalize the data.</li>
+<li>Data splitting: Divide the dataset into training (70%), validation (15%), and testing (15%) subsets. </li>
+<li>Additional Evaluation Data:<br>Collect offline drone images (not included in the SARD dataset) to serve as an external test set for assessing the model’s real-world performance after implementation. </li>
 </ul>
 
 **Margarita Rincon**:
