@@ -70,8 +70,9 @@ We analyze common failure cases—such as occlusions, scale variation, and clutt
 </ul>
 <li>Loss function and Optimizer: Cross-Entropy; Adam.</li> 
 <li>Augmentations: RandomHorizontalFlip, RandonVerticalFlip, RandomRotation, ColorJitter, RandomResizedCrop.</li>
-<li> Training: 150 epochs and fine tuning the variable according to results.</li>
-<li>Outputs: Accuracy, ROC-AUC</li>
+<li> Training: 20 epochs and fine tuning the variable according to results.</li>
+<li>Outputs: Accuracy, Prediction grid</li>
+<li> Link to dataset: https://drive.google.com/file/d/1DqctU2uuiGeLeU-YNASPM8zLB2nIVOq9/view?usp=drive_link</li>
 </ul><br>
 
 **Margarita Rincon's Model: MobileNetV2**
